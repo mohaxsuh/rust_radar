@@ -35,7 +35,7 @@ async def ws_conn(msg, auth, identifier=1001):
             'Name': 'WebRcon'
         }
     while True:
-        async with websockets.client.connect(
+        async with websockets.connect(
                 'ws://{ip}:{port}/{pswd}'.format(**auth), max_size=2 ** 30, read_limit=2 ** 30, write_limit=2 ** 30, close_timeout=0) as websocket:
             
             
